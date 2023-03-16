@@ -1,7 +1,4 @@
 # Node.js
-- task: BrowserStackResults@1
-  inputs:
-    browserstackProduct: 'automate, app automate'
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -23,3 +20,7 @@ steps:
     npm install
     npm run first
   displayName: 'npm install and build'
+
+- task: BrowserStackResults@1
+  inputs:
+    browserstackProduct: 'automate, app automate'
