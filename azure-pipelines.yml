@@ -15,6 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BST'
+
+- task: BrowserStackAppUploader@0
+  inputs:
+    appPath: 'node-appium-app-browserstack/android/WikipediaSample (1).apk'
+
 - script: |
     cd android
     npm install
